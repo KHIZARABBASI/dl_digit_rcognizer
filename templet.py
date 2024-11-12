@@ -21,6 +21,9 @@ list_of_files = [
     f'src/{project_name}/config/configration.py',
     "research/trials.ipynb",
     "templates/index.html"
+    "config/config.yaml",
+    "params.yaml",
+    "schema.yaml",
     
 ]
 
