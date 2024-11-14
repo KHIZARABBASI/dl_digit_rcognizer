@@ -1,0 +1,11 @@
+artifacts/data_ingestion/x_train.npy is present and non-empty.
+artifacts/data_ingestion/x_train.npy is present and non-empty.
+artifacts/data_ingestion/y_train.npy is present and non-empty.
+artifacts/data_ingestion/y_train.npy is present and non-empty.
+artifacts/data_ingestion/x_test.npy is present and non-empty.
+artifacts/data_ingestion/x_test.npy is present and non-empty.
+artifacts/data_ingestion/y_test.npy is present and non-empty.
+artifacts/data_ingestion/y_test.npy is present and non-empty.
+All data shapes are correct.
+Data values are within expected ranges.
+No missing values detected.
