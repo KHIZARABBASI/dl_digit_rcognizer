@@ -1,0 +1,18 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: "https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz"  
+  local_data_file: artifacts/data_ingestion/mnist.npz
+  unzip_dir: artifacts/data_ingestion
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  data_files:
+    - artifacts/data_ingestion/x_train.npy
+    - artifacts/data_ingestion/y_train.npy
+    - artifacts/data_ingestion/x_test.npy
+    - artifacts/data_ingestion/y_test.npy
+  stats_file: artifacts/data_validation/stats
