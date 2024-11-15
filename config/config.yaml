@@ -16,3 +16,10 @@ data_validation:
     - artifacts/data_ingestion/x_test.npy
     - artifacts/data_ingestion/y_test.npy
   stats_file: artifacts/data_validation/stats
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  transformed_train_dir: artifacts/data_transformation/train
+  transformed_test_dir: artifacts/data_transformation/test
+  batch_size: 32

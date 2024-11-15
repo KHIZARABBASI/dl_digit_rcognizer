@@ -9,6 +9,7 @@ class DataIngestionConfig:
     local_data_file: Path
     unzip_dir: Path
 
+
 @dataclass(frozen=True)
 class DataValidationConfig:
     root_dir: Path  # Root directory for validation artifacts
@@ -16,3 +17,9 @@ class DataValidationConfig:
     status_file: Path  # Path to save the validation status
 
 
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    transformed_train_dir: Path
+    transformed_test_dir: Path
+    batch_size: int

@@ -1,7 +1,8 @@
 from Digit_Recognizer.constants import *
 from Digit_Recognizer.utils.common import read_yaml, create_directories
 from Digit_Recognizer.entity.config_entity import (DataIngestionConfig,
-                                                   DataValidationConfig)
+                                                   DataValidationConfig,
+                                                   DataTransformationConfig)
 
 
 class ConfigurationManager:
@@ -44,5 +45,16 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+        create_directories([config.root_dir, config.transformed_train_dir, config.transformed_test_dir])
+
+        return DataTransformationConfig(
+            root_dir=Path(config.root_dir),
+            transformed_train_dir=Path(config.transformed_train_dir),
+            transformed_test_dir=Path(config.transformed_test_dir),
+            batch_size=config.batch_size
+        )
 
     

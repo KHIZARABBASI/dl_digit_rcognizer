@@ -166,3 +166,8 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 >>>>>>> eca3159b0a88f5baa889921e8b2c4fcb647ab65f
+
+logs/
+artifacts/*
+
+
