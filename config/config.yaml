@@ -23,3 +23,15 @@ data_transformation:
   transformed_train_dir: artifacts/data_transformation/train
   transformed_test_dir: artifacts/data_transformation/test
   batch_size: 32
+
+
+model_training:
+  root_dir: artifacts/model_training
+  model_dir: artifacts/model_training/model
+  model_file: mnist_cnn.h5
+  evaluation_file: evaluation.txt
+  epochs: 10
+  batch_size: 64
+  learning_rate: 0.001
+  transformed_train_dir: artifacts\data_transformation\train
+  transformed_test_dir: artifacts\data_transformation\test

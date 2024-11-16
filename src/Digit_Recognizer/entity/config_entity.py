@@ -23,3 +23,16 @@ class DataTransformationConfig:
     transformed_train_dir: Path
     transformed_test_dir: Path
     batch_size: int
+
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir: Path
+    model_dir: Path
+    model_file: Path
+    evaluation_file: Path
+    epochs: int
+    batch_size: int
+    learning_rate: float
+    transformed_train_dir: Path
+    transformed_test_dir: Path

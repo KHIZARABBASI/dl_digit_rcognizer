@@ -2,7 +2,8 @@ from Digit_Recognizer.constants import *
 from Digit_Recognizer.utils.common import read_yaml, create_directories
 from Digit_Recognizer.entity.config_entity import (DataIngestionConfig,
                                                    DataValidationConfig,
-                                                   DataTransformationConfig)
+                                                   DataTransformationConfig,
+                                                   ModelTrainingConfig)
 
 
 class ConfigurationManager:
@@ -58,3 +59,22 @@ class ConfigurationManager:
         )
 
     
+
+    def get_model_training_config(self) -> ModelTrainingConfig:
+        config = self.config.model_training
+
+        create_directories([config.root_dir, config.model_dir])
+
+        model_training_config = ModelTrainingConfig(
+            root_dir=Path(config.root_dir),
+            model_dir=Path(config.model_dir),
+            model_file=Path(config.model_dir) / config.model_file,
+            evaluation_file=Path(config.root_dir) / config.evaluation_file,
+            epochs=config.epochs,
+            batch_size=config.batch_size,
+            learning_rate=config.learning_rate,
+            transformed_train_dir= config.transformed_train_dir,
+            transformed_test_dir= config.transformed_test_dir
+        )
+
+        return model_training_config
